@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    color: #f0f0f0;
+}
+
+#header a  {
+    color: #f0f0f0;
+}
+
+#header div {
+    height: 50px;
+}
+
+.header-sidebar {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 230px;
+    /* font-family: 'Patrick Hand', cursive; */
+    font-family: 'Dosis', sans-serif;
+    background-color: 	 #2786bd;
+    font-size: 17pt;
+}
+
+.header-content {
+    flex: 1;
+    display: flex;
+    background-color:#3c8dbc;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sidebar {
+    width: 230px;
+    /* height: 100vh; */
+    min-height: calc(100vh - 50px);
+    min-height: 100vh;
+    background-color: #4c4c4c;
+    position: relative;
+    left: 0;
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
+}
+
+#sidebar.collapse {
+    left: -230px;
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
+}
+
+#content {
+    flex: 1;
+    background-color: #f0f0f0;
+    position: relative;
+    padding: 10px;
+    left: 0;
+    -webkit-transition: all 0.7s ease-in;
+    -moz-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
+    transition: all 0.7s ease-in;
+}
+
+@media (max-width: 700px) {
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .header-sidebar, .header-content {
+        width: 100%;
+    }
+
+    #sidebar {
+        position: fixed;
+        left: 0px;
+        top: 100px;
+        z-index: 700;
+    }
+}
+
